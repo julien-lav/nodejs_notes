@@ -1,0 +1,14 @@
+npm search postgresql
+npm install nomdumodule
+npm install markdown
+
+var markdown = require('markdown').markdown;
+console.log(markdown.toHTML('Un paragraphe en **markdown** !'));
+résultat dans la console :
+<p>Un paragraphe en <strong>markdown</strong> !</p>
+
+npm update
+
+// to publish a package
+npm adduser
+npm publish

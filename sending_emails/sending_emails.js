@@ -4,7 +4,7 @@ var nodemailer = require('nodemailer');
 var fs = require('fs');
 
 //var serializeMail = ['','','','']
-var serializeMail = ['julien.laville@hotmail.fr']
+var serializeMail = ['']
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -12,7 +12,7 @@ var transporter = nodemailer.createTransport({
     user: 'juliancito75@gmail.com',
     pass: ''
   }
-});
+}); 
 
 fs.readFile("./attachment.txt", function (err, data) {
   for (var i = 0; i < serializeMail.length; i++){

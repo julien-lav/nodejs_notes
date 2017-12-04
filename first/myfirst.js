@@ -3,6 +3,11 @@ var dt = require('./module');
 //To include a module, use the require() function with the name of the module
 //Now your application has access to the HTTP module, and is able to create a server
 //Node.js has a built-in module called HTTP, which allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP)
+
+//monmodule.direBonjour();
+
+//monmodule.direByeBye();
+
 var url = require('url');
 //There are built-in modules to easily split the query string into readable parts, such as the URL module.
 

@@ -1,0 +1,25 @@
+https://www.grafikart.fr/formations/nodejs/express
+
+npm init
+
+npm install express
+// or
+npm i --save express
+s
+
+dans package.json
+start": "nodemon server.js"
+
+npm install --save nodemon
+nodemon server.js
+// depuis node-module/bin 
+
+npm run start
+
+npm install --save ejs
+app.set('view engine', 'ejs')
+
+
+https://www.gloomaps.com/ila37lE4rs
+
+
