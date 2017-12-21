@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Livre d'or</title>
+	<link rel="stylesheet" href="/assets/semantic/semantic.min.css">
+	<link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+	<h1>Titre</h1>
+
+	<div class="ui fixed inverted menu">
+		
+		<a href="/" class="header item">Accueil</a>
+
+	</div>
+		<div class="ui main container">
+	    <% if (locals.flash && locals.flash.error) {%>
+		
+			<div class="ui negative message">
+				<%= flash.error %>
+			</div>
+		<% } %>
+
