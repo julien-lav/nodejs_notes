@@ -37,3 +37,9 @@ npm install --save body-parser
 locals pour acceder aux variables locales
 
 npm install --save mysql
+sudo apt install mysql-client-core-5.7
+sudo apt-get install mysql-server
+
+sudo mysql -p
+
+npm install --save moment 

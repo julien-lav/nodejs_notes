@@ -10,4 +10,24 @@
 	 </button>
 
 </form>
+
+<div class="ui comments">
+	<h3 class="ui dividing header"></h3>
+	<% for (message of messages) { %>
+	<div class="comment">
+		<a href="/message/<% message.id %>" class="avatar"><img src="" alt=""></a>
+		<div class="content">
+			<div class="metadata">
+				<div class="date">
+					<%= message.created_at.fromNow()%>
+				</div>
+			</div>
+
+				<div class="text"><%= message.content %></div>
+			
+		</div>
+	</div>
+	<% } %>
+</div>
+
 <% include footer %>

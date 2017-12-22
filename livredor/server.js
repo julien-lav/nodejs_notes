@@ -34,25 +34,41 @@ app.use(require('./middlewares/flash'))
 
 // Routes
 app.get('/', (request, response) => {
-	if (request.session.error) {
-		response.locals.error = request.session.error
-		request.session.error = undefined 
-	}
-	response.render('pages/index')
+	process.env.NODE_ENV
+	//if (request.session.error) {
+	//	response.locals.error = request.session.error
+	//	request.session.error = undefined 
+	//}
+	let Message = require('./models/message') 
+	Message.all(function (messages){
+	response.render('pages/index', {messages: messages})
+	})
 	//response.senrsd('salutation')
+})
+app.get('message/:id', (request, response) => {
+	response.send(request.params.id)
+
+	let Message = require('./models/message') 
+	response.find(request.params.id, function(message) {
+		response.render('message/show')
+	})
+
+
 })
 app.post('/', (request, response) => {
 	console.log(request.body)
 	if (request.body.message === undefined || request.body.message === '') {
 	//response.render('pages/index', {error: 'Vous n\'avez pas entré de message'})
 	request.flash('error',"Vous n'avez pas posté de message")
+	response.redirect('/')
 	} else {
 		let Message = require('./models/message')
 		Message.create(request.body.message, function () {
 		request.flash('success', 'Merci !')
+		response.redirect('/')
 		})	
 	}
-	response.redirect('/')
+	
 
 })
 
